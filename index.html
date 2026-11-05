@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Penghitung Nilai Akhir</h2>
+    <div>
+        <label for="Nilai">Nilai Tugas (0-100):</label><br>
+        <input type="number" id="Tugas" placeholder="contoh: 75">
+    </div> 
+    <br>
+    <div>
+        <label for="Nilai">Nilai UTS (0-100):</label><br>
+        <input type="number" id="UTS" placeholder="contoh: 75">
+    </div>
+    <br>
+    <div>
+        <label for="Nilai">Nilai UAS (0-100):</label><br>
+        <input type="number" id="UAS" placeholder="contoh: 60">
+    </div>   
+    <br>
+
+    <button onclick="cekNilai ()">Cek</button> 
+
+    <p id="hasil"></p>
+
+<script>
+    function cekNilai () {
+    let Tugas = Number(document.getElementById("Tugas").value);
+    let UTS = Number(document.getElementById("UTS").value);
+    let UAS = Number(document.getElementById("UAS").value);
+
+    let nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
+
+    let grade = "";
+    if (nilaiAKhir >= 75) {
+        grade ="A";
+    } else if (nilaiAKhir >= 75) {
+        grade ="B";
+    } else if (nilaiAkhir >= 60) {
+        grade ="C";
+    } else {
+        grade ="D";
+    } 
+    } 
+    document.getElementById("hasil").innerHTML = "Nilai AKhir" + grade;
+    
+
+</script>
+
+
+</body>
+</html>
+
